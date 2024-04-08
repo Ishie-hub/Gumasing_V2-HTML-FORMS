@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    
+    <title>Shie's Restaurant</title>
+</head>
+<body>
+    <div class="container">
+        <!-- header part -->
+    <header class='order-form-header'>
+        <img src="images/logo.png" alt="Logo">
+        <h1>Order Form</h1>
+        <p>
+            <em>Explore the diverse tastes of SHIE'S cooking! Fill out your cravings through this order form.</em>
+        </p>
+    </header>
+    <!-- ends here -->
+    <form action="" method="get" class="order-form">
+        <!-- Basic Info -->
+        <div class="form-row">
+            <label for="full-name">Name:</label>
+            <input id="full-name" name="full-name" type="text" required>
+        </div>
+
+        <div class="form-row">
+            <label for="email">Email:</label>
+            <input id="email" name="email" type="email" required>
+        </div>
+
+        <div class="form-row">
+            <label for="age">Age:</label>
+            <input id="age" name="age" type="number" required>
+        </div>
+
+        <!-- Type of Cuisine -->
+        <div class="form-row">
+            <div id="dropdown">
+                <button class="dropdown-toggle">
+                    <span>Menu</span>
+                    <i class="fa-solid fa-caret-down"></i>
+                </button>
+                <ul class="menu">
+                    <li class="menu-item"><a href="#">Italian</a></li>
+                    <li class="menu-item"><a href="#">Chinese</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="submenu-toggle">
+                            <span>Healthy Options</span>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Vegetarian</a></li>
+                            <li class="submenu-item"><a href="#">Vegan</a></li>
+                            <li class="submenu-item"><a href="#">Gluten-Free</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item"><a href="#">Mexican</a></li>
+                    <li class="menu-item dropdown">
+                        <a href="#" class="submenu-toggle">
+                            <span>Specials</span>
+                            <i class="fa-solid fa-caret-right"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li class="submenu-item"><a href="#">Carbonara De Shie</a></li>
+                            <li class="submenu-item"><a href="#">Chicken Rice Skillet</a></li>
+                            <li class="submenu-item"><a href="#">Simple Garlic Shrimp<</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mode of Payment -->
+        <div class="form-row">
+            <label for="payment">Mode of Payment:</label>
+            <select id="payment" name="payment" required>
+                <option value="cash">Cash</option>
+                <option value="card">Credit Card</option>
+                <option value="online">Online Payment</option>
+            </select>
+        </div>
+
+        <!-- Dine-in/Take-out -->
+        <div class="form-row">
+            <label for="order-type">Dine-in/Take-out:</label>
+            <select id="order-type" name="order-type" required>
+                <option value="dine-in">Dine-in</option>
+                <option value="take-out">Take-out</option>
+            </select>
+        </div>
+
+        <!-- Comments/Instructions -->
+        <div class="form-row">
+            <label for="comments">Comments/Instructions:</label>
+            <textarea id="comments" name="comments"></textarea>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-row">
+            <button type="submit" id="place-order">Place Order</button>
+            <button type="button" id="cancel">Cancel</button>
+        </div>
+    </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
